@@ -1,0 +1,30 @@
+package ec.fin.litoral.prueba.web.app.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import ec.fin.litoral.prueba.web.app.models.Usuario;
+
+@Controller
+@RequestMapping("/app")
+public class IndexController {
+
+	// @RequestMapping(value="/index", method = RequestMethod.GET)
+	@GetMapping({ "/index", "/", "/home" , ""})
+	public String index(Model model) {
+		model.addAttribute("titulo","Spring Framework Ronald!");
+		return "index";
+	}
+	
+	@RequestMapping("/perfil")
+	public String perfil(Model model) {
+		Usuario usuario = new Usuario();
+		usuario.setApellido("Castaneda");
+		usuario.setNombre("Ronald");
+		
+		return "perfil";
+	}
+
+}

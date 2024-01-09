@@ -1,0 +1,13 @@
+package ec.fin.litoral.prueba.web.app.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class IndexController {
+
+	// @RequestMapping(value="/index", method = RequestMethod.GET)
+	@GetMapping({ "/index", "/", "/home" })
+	public String index() {
+		return "index";
+	}
+
+}

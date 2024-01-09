@@ -1,0 +1,9 @@
+package ec.fin.litoral.prueba.web.app.models;
+
+
+public class Usuario {
+
+	private String nombre;
+	private String apellido;
+	
+}
